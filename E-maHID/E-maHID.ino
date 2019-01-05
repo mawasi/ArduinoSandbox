@@ -81,7 +81,7 @@ enum PIN{
   Pin9 = 9,
 };
 
-KeyInfo KeyInfoList[KEY_MAX] = {KeyInfo(PIN::Pin5, KEY_LEFT_CTRL), KeyInfo(PIN::Pin6, KEY_LEFT_ALT), KeyInfo(PIN::Pin7, KEY_LEFT_SHIFT),
+KeyInfo KeyInfoList[KEY_MAX] = {KeyInfo(PIN::Pin5, KEY_LEFT_ALT), KeyInfo(PIN::Pin6, KEY_LEFT_CTRL), KeyInfo(PIN::Pin7, KEY_LEFT_SHIFT),
                                 KeyInfo(PIN::Pin8, 'z'), KeyInfo(PIN::Pin9, 's')};
 
 // the setup function runs once when you press reset or power the board
@@ -94,7 +94,7 @@ void setup() {
     KeyInfoList[i].Initialize();
   }
 
-  Serial.begin(9600);
+//  Serial.begin(9600);
   Keyboard.begin();
 
 }
